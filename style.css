@@ -1,0 +1,209 @@
+/*Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A0AFB7);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Tipografia */
+h1, h2 {
+    color: #121212f1;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 10px;
+
+}
+
+/* Formulário de Cadastro*/
+.form-group {
+    margin-bottom: 20px;
+
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+
+}
+
+#equipe-form input,
+#equipe-form select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 3px #c4c4c4 solid;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+
+}
+
+#equipe-form input:focus,
+#equipe-form select:focus {
+    outline: none;
+    border-color: #000000;
+    transform: translateY(-2px);
+
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding: 50px;
+    margin-top: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+
+/* Área de Listagem*/
+#separacao-area {
+    background: linear-gradient(145deg, #ffffff, #f0f2ff);
+    padding: 45px;
+    border-radius: 16px;
+
+}
+
+.file-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+/* Tabela */
+#equipes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#equipes-table thead {
+    background: linear-gradient(45deg, #1a1a1a, #333);
+}
+
+#equipes-table thead th {
+    padding: 18px 16px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#equipes-table tbody td {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+#equipes-table tbody tr:hover {
+    background: linear-gradient(90deg, #fff8f8, #ffebee);
+}
+
+#equipes-table tbody tr:nth-child(even) {
+    background: #fafbff;
+}
+
+/* Botões da Tabela */
+.edit-btn, .delete-btn, files{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+}
+
+#btn-salvar,
+#btn-cancelar,
+#btn-exportar {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(14, 13, 13, 0.08);
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    color: #121212;
+}
+
+
+/* Botão salvar */
+#btn-salvar {
+    background: linear-gradient(135deg, #121212);
+    color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+#btn-salvar:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* Botão cancelar */
+#btn-cancelar {
+    background: linear-gradient(135deg, #b6b6b6, #d1d1d1);
+    color: #161616;
+}
+
+#btn-cancelar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #d7dbe0, #edf0f5);
+}
+
+/* Acessibilidade / foco de teclado */
+#btn-salvar:focus,
+#btn-cancelar:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
