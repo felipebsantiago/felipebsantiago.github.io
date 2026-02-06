@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipes F1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-layout">
+        <aside class="card">
+            <h2>Dados da Equipe</h2>
+            <form id="equipe-form">
+                <input type="hidden" id="equipe-id">
+                
+                <div class="form-group">
+                    <label>NOME DA EQUIPE</label>
+                    <input type="text" id="nome" required placeholder="Ex: Ferrari">
+                </div>
+                
+                <div class="form-group">
+                    <label>PAÍS DE ORIGEM</label>
+                    <input type="text" id="pais" placeholder="Ex: Itália">
+                </div>
+                
+                <div class="form-group">
+                    <label>CHEFE DE EQUIPE</label>
+                    <input type="text" id="chefe" placeholder="Ex: Frédéric Vasseur">
+                </div>
+                
+                <div class="form-group">
+                    <label>MOTOR/FORNECEDOR</label>
+                    <input type="text" id="motor" placeholder="Ex: Ferrari">
+                </div>
+                
+                <div class="form-group">
+                    <label>STATUS</label>
+                    <select id="status">
+                        <option value="Ativa">Ativa</option>
+                        <option value="Inativa">Inativa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>TOTAL DE TÍTULOS</label>
+                    <input type="number" id="titulos" value="0">
+                </div>
+                
+                <button type="submit" id="btn-salvar" class="btn-primary">
+                    <i class="fas fa-plus"></i> Adicionar à Lista
+                </button>
+            </form>
+        </aside>
+
+        <main class="card">
+            <h2>Listagem de Equipes</h2>
+            <div class="table-container">
+                <table id="equipes-table">
+                    <thead>
+                        <tr>
+                            <th>Equipe</th>
+                            <th>País</th>
+                            <th>Chefe</th>
+                            <th>Motor</th>
+                            <th>Status</th>
+                            <th>Títulos</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="equipes-list">
+                        </tbody>
+                </table>
+            </div>
+            
+            <button onclick="exportarCSV()" class="btn-export">
+                <i class="fas fa-file-export"></i> Exportar Lista para CSV
+            </button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
